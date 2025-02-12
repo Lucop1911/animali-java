@@ -26,3 +26,4 @@ public class DettaglioAnimale extends JFrame {
         setVisible(true);
     }
 }
+
