@@ -1,11 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
+import java.lang.module.FindException;
 
-public class Finestra extends JFrame {
+public abstract class Finestra extends JFrame implements ActionListener {
+    protected JButton userButton = new JButton("LOGIN");
     
     public Finestra(){
         super();
         creaGUI();
+        creaContenuto();
     }
 
     public void creaGUI(){
@@ -21,8 +25,7 @@ public class Finestra extends JFrame {
 
         // Aggiunta logo a sinsitra
         ImageIcon logo = new ImageIcon("logo.png");
-        Image logoImage = logo.getImage();
-        Image resizedLogo = logoImage.getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+        Image resizedLogo = logo.getImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
         JLabel logoLabel = new JLabel(new ImageIcon(resizedLogo));
         topPanel.add(logoLabel, BorderLayout.WEST);
 
@@ -34,17 +37,35 @@ public class Finestra extends JFrame {
         homeButton.setBackground(Color.WHITE);
         homeButton.setPreferredSize(new Dimension(100,35));
         homeButton.setFont(new Font("Arial", Font.BOLD, 15));
+        userButton.addActionListener(e -> {
+            dispose();
+            new Home();
+        });
 
         JButton cartButton = new JButton("CART");
         cartButton.setBackground(Color.WHITE);
         cartButton.setPreferredSize(new Dimension(100,35));
         cartButton.setFont(new Font("Arial", Font.BOLD, 15));
+        userButton.addActionListener(e -> {
+            dispose();
+            new Carrello();
+        });
         
-        JButton userButton = new JButton("user");
         userButton.setBackground(Color.WHITE);
-        userButton.setPreferredSize(new Dimension(10,35));
-        userButton.setHorizontalAlignment(SwingConstants.RIGHT);
+        userButton.setPreferredSize(new Dimension(150,35));
         userButton.setFont(new Font("Arial", Font.BOLD, 15));
+        userButton.addActionListener(e -> {
+            if(userButton.getText().equals("admin")){
+                dispose();
+                new Admin();
+            }
+            else if(userButton.getText().equals("LOGIN")){
+                dispose();
+                new Login();
+                return;
+            }
+            else return;
+        });
         
         buttonPanel.add(homeButton);
         buttonPanel.add(Box.createRigidArea(new Dimension(5, 0)));
@@ -55,22 +76,13 @@ public class Finestra extends JFrame {
         topPanel.add(buttonPanel);
 
         this.add(topPanel, BorderLayout.NORTH);
-        this.setVisible(true);
+        this.setVisible(false);
     }
 
-}
+    public abstract void creaContenuto();
 
-public class Finestra extends JFrame implements ActionListener {
-    public Finestra() {
-        super();
-        creaGui();
+    public void setUsername(String nome){
+        userButton.setText(nome);
     }
 
-    public void creaGui(){
-        this.setResizable(true);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(600, 600);
-        this.setTitle("tris");
-        this.setVisible(true);
-    }
 }

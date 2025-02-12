@@ -1,3 +1,5 @@
+import java.awt.*;
+import javax.swing.*;
 
 public class Home extends Finestra {
     public Home() {
