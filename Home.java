@@ -8,7 +8,7 @@ public class Home extends Finestra {
     public Home(Negozio negozio) {
         this.negozio = negozio;
         setTitle("Home - Animal Store");
-        setLayout(new GridLayout(0, 1));
+        setLayout(new GridLayout(1, 1));
 
         aggiornaBottoni();
 
@@ -20,37 +20,11 @@ public class Home extends Finestra {
     private void aggiornaBottoni() {
         getContentPane().removeAll();
 
-        JButton caniButton = new JButton("Cani");
-        caniButton.setLayout(new GridLayout(0, 1));
-
-        JButton gattiButton = new JButton("Gatti");
-        gattiButton.setLayout(new GridLayout(0, 1));
-
-        JButton uccelliButton= new JButton("Uccelli");
-        uccelliButton.setLayout(new GridLayout(0, 1));
-
-        JButton pongaButton = new JButton("Ponghe");
-        pongaButton.setLayout(new GridLayout(0, 1));
-
         for (Animale animale : negozio.getAnimali()) {
             JButton button = new JButton(animale.getNome());
             button.addActionListener(e -> openAnimalPage(animale));
-
-            if (animale instanceof Cane) {
-                caniButton.add(button);
-            } else if (animale instanceof Gatto) {
-                gattiButton.add(button);
-            } else if (animale instanceof Uccello) {
-                uccelliButton.add(button);
-            } else if (animale instanceof Ponga) {
-                pongaButton.add(button);
-            }
+            add(button);
         }
-
-        add(caniButton);
-        add(gattiButton);
-        add(uccelliButton);
-        add(pongaButton);
 
         revalidate();
         repaint();
@@ -58,6 +32,7 @@ public class Home extends Finestra {
 
     private void openAnimalPage(Animale animale) {
         new DettaglioAnimale(animale);
+
     }
 
     @Override

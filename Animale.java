@@ -19,6 +19,7 @@ public class Animale {
         this.annoNascita = annoNascita;
         this.prezzo = prezzo;
         this.note = note;
+
     }
 
     public Animale(String razza, String specie, int annoNascita, double prezzo, String note) {
