@@ -15,7 +15,7 @@ public abstract class Finestra extends JFrame implements ActionListener {
     public void creaGUI(){
         this.setResizable(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(600, 600);
+        this.setSize(700, 600);
         this.setTitle("Negozio Animali");
         this.setVisible(true);
 
@@ -77,6 +77,7 @@ public abstract class Finestra extends JFrame implements ActionListener {
 
         this.add(topPanel, BorderLayout.NORTH);
         this.setVisible(false);
+        this.setLocationRelativeTo(null);
     }
 
     public abstract void creaContenuto();

@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.border.Border;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
@@ -14,36 +16,66 @@ public class Login extends Finestra {
 
     @Override
     public void creaContenuto() {
-        JPanel panel = new JPanel();
-        panel.setLayout(null);
-        this.add(panel, BorderLayout.CENTER);
+        Font fontTesto = new Font("Arial", Font.PLAIN, 25);
+        JPanel panel = new JPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        JLabel titleLabel = new JLabel("Benvenuto nel Negozio di Animali!");
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        titleLabel.setBounds(80, 20, 1000, 30);
-        panel.add(titleLabel);
+        // titolo sopra
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
+        gbc.anchor = GridBagConstraints.CENTER;
 
-        JLabel userLabel = new JLabel("Nome utente:");
-        userLabel.setBounds(50, 70, 100, 25);
-        panel.add(userLabel);
+        JLabel titleLabel = new JLabel("Benvenuto/a nel negozio di Animali!", SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 30));
+        panel.add(titleLabel, gbc);
 
+        JLabel userLabel = new JLabel("Username:");
+        userLabel.setFont(fontTesto);
+        gbc.gridy = 1;
+        gbc.gridwidth = 1;
+        panel.add(userLabel, gbc);
+
+        gbc.gridx = 1;
         userText = new JTextField();
-        userText.setBounds(150, 70, 150, 25);
-        panel.add(userText);
+        userText.setPreferredSize(new Dimension(100,40));
+        userText.setFont(new Font("Arial", Font.PLAIN, 20));
+        panel.add(userText, gbc);
 
+        gbc.gridx = 0;
+        gbc.gridy = 2;
         JLabel passwordLabel = new JLabel("Password:");
-        passwordLabel.setBounds(50, 110, 100, 25);
-        panel.add(passwordLabel);
+        passwordLabel.setFont(fontTesto);
+        panel.add(passwordLabel, gbc);
 
+        gbc.gridx = 1;
         passwordField = new JPasswordField();
-        passwordField.setBounds(150, 110, 150, 25);
-        panel.add(passwordField);
+        passwordField.setPreferredSize(new Dimension(100,40));
+        passwordField.setFont(new Font("Arial", Font.PLAIN, 20));
+        panel.add(passwordField, gbc);
 
-        loginButton = new JButton("Accedi");
-        loginButton.setBounds(150, 150, 100, 30);
-        panel.add(loginButton);
-
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.fill = GridBagConstraints.NONE;
+        gbc.anchor = GridBagConstraints.LINE_START;
+        gbc.insets = new Insets(50, 50, 0, 50);
+        loginButton = new JButton("ACCEDI");
+        loginButton.setFont(fontTesto);
+        loginButton.setBackground(new Color(255,243,204,255));
+        loginButton.setFocusPainted(false);
         loginButton.addActionListener(this);
+        panel.add(loginButton, gbc);
+
+        gbc.gridx = 1;
+        gbc.anchor = GridBagConstraints.LINE_END;
+        JButton registerButton = new JButton("REGISTER");
+        registerButton.setFont(fontTesto);
+        registerButton.setBackground(new Color(255,243,204,255));
+        panel.add(registerButton, gbc);
+
+        add(panel, BorderLayout.CENTER);
     }
 
     @Override
