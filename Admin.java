@@ -15,32 +15,37 @@ public class Admin extends Finestra {
 
     @Override
     public void creaContenuto() {
-        setUsername("admin");        
-        // Pannello principale
+        setUsername("admin");
         JPanel mainPanel = new JPanel(new BorderLayout());
-        
-        // Titolo
+
         JLabel titleLabel = new JLabel("Admin Overview");
         titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
         mainPanel.add(titleLabel, BorderLayout.NORTH);
-        
-        // Tab con Inventario e Clienti
+
         JTabbedPane tabbedPane = new JTabbedPane();
-        
+
         JPanel inventarioPanel = new JPanel();
         inventarioPanel.setLayout(new GridLayout(1, 3, 10, 10));
-        inventarioPanel.add(new JLabel(new ImageIcon("cat.png"))); // Placeholder per immagine
+        inventarioPanel.add(new JLabel(new ImageIcon("cat.png"))); // Placeholder immagine
         inventarioPanel.add(new JLabel(new ImageIcon("dog1.png")));
         inventarioPanel.add(new JLabel(new ImageIcon("dog2.png")));
-        
+
         JPanel clientiPanel = new JPanel();
         clientiPanel.add(new JLabel("Gestione Clienti"));
-        
+
         tabbedPane.addTab("INVENTARIO", inventarioPanel);
         tabbedPane.addTab("CLIENTI", clientiPanel);
-        
+
         mainPanel.add(tabbedPane, BorderLayout.CENTER);
-        
+
+        JButton homeButton = new JButton("Home");
+        homeButton.addActionListener(e -> {
+            new Home();
+            dispose();
+        });
+
+        mainPanel.add(homeButton, BorderLayout.SOUTH);
+
         add(mainPanel);
     }
 
@@ -52,7 +57,7 @@ public class Admin extends Finestra {
 
             if (username.equals("admin") && password.equals("password123")) {
                 JOptionPane.showMessageDialog(this, "Login avvenuto con successo!");
-                setUsername(username); // Cambia il bottone "User" con il nome dell'utente
+                setUsername(username);
 
                 // revalidate();
                 // repaint();
@@ -62,10 +67,4 @@ public class Admin extends Finestra {
         }
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
-    }
-    
 }
