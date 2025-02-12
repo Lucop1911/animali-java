@@ -41,6 +41,11 @@ public abstract class Finestra extends JFrame implements ActionListener {
             new Login();
         });
 
+        homeButton.addActionListener(e -> {
+            dispose();
+            new Home(negozio);
+        });
+
         JButton cartButton = new JButton("CART");
         cartButton.setBackground(Color.WHITE);
         cartButton.setPreferredSize(new Dimension(100,35));
