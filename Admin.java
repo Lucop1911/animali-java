@@ -2,7 +2,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import javax.swing.*;
 
-
 public class Admin extends Finestra {
     private JTextField userText;
     private JPasswordField passwordField;
@@ -38,13 +37,19 @@ public class Admin extends Finestra {
 
         mainPanel.add(tabbedPane, BorderLayout.CENTER);
 
+        // Creiamo il bottone "Home" e lo aggiungiamo in basso
         JButton homeButton = new JButton("Home");
+        Negozio negozio = new Negozio("Negozio di Animali");
+
         homeButton.addActionListener(e -> {
-            new Home();
             dispose();
+            new Home(negozio);
         });
 
-        mainPanel.add(homeButton, BorderLayout.SOUTH);
+        // Creiamo un pannello per il bottone e lo posizioniamo in basso
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.add(homeButton);
+        mainPanel.add(bottomPanel, BorderLayout.SOUTH); // Ora il bottone è visibile!
 
         add(mainPanel);
     }
@@ -58,13 +63,9 @@ public class Admin extends Finestra {
             if (username.equals("admin") && password.equals("password123")) {
                 JOptionPane.showMessageDialog(this, "Login avvenuto con successo!");
                 setUsername(username);
-
-                // revalidate();
-                // repaint();
             } else {
                 JOptionPane.showMessageDialog(this, "Credenziali errate. Riprova.");
             }
         }
     }
-
 }

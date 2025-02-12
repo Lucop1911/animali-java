@@ -21,6 +21,9 @@ public class Animale {
         this.note = note;
     }
 
+    public Animale(String razza, String specie, int annoNascita, double prezzo, String note) {
+    }
+
     public String getDescrizione() {
         return descrizione;
     }

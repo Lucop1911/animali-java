@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="264e5967-3afb-4dc6-9c5f-78682e7dea8c" name="Changes" comment="Finestra home e finestre animali">
-      <change afterPath="$PROJECT_DIR$/DettaglioAnimale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Animale.java" beforeDir="false" afterPath="$PROJECT_DIR$/Animale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carrello.java" beforeDir="false" afterPath="$PROJECT_DIR$/Carrello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Finestra.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/Home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animali-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/animali-java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/animali-java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/animali-java/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/Animale.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/animali-java/Animale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/Finestra.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/animali-java/Finestra.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/animali-java/Home.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lucop1911&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lucop1911/animali-java.git&quot;,
+    &quot;accountId&quot;: &quot;dc73a861-d54c-4424-94ef-27ff1c1aeebf&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>

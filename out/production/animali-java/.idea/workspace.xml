@@ -1,24 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="264e5967-3afb-4dc6-9c5f-78682e7dea8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Carrello.java" beforeDir="false" afterPath="$PROJECT_DIR$/Carrello.java" afterDir="false" />
+    <list default="true" id="264e5967-3afb-4dc6-9c5f-78682e7dea8c" name="Changes" comment="Finestra home e finestre animali">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animali-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/animali-java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/animali-java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/Animale.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/animali-java/Animale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/Carrello.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/Finestra.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/Home.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/animali-java/Login.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Lucop1911"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Lucop1911/animali-java.git",
+    "accountId": "dc73a861-d54c-4424-94ef-27ff1c1aeebf"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -62,5 +85,9 @@
       <updated>1739348913174</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Finestra home e finestre animali" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finestra home e finestre animali" />
   </component>
 </project>

@@ -64,4 +64,3 @@ public class Login extends Finestra {
         }
     }
 }
-

@@ -1,13 +1,12 @@
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.util.ArrayList;
-import javax.swing.*;
 
 public class Home extends Finestra {
-    private Negozio negozio; // Riferimento al negozio
+    private Negozio negozio;
 
     public Home(Negozio negozio) {
-        this.negozio = negozio; // Assegna il negozio
+        this.negozio = negozio;
         setTitle("Home - Animal Store");
         setLayout(new GridLayout(0, 1));
 
@@ -19,13 +18,43 @@ public class Home extends Finestra {
     }
 
     private void aggiornaBottoni() {
-        getContentPane().removeAll(); // Pulisce i bottoni esistenti
+        getContentPane().removeAll();
+
+        JPanel caniPanel = new JPanel();
+        caniPanel.setBorder(BorderFactory.createTitledBorder("Cani"));
+        caniPanel.setLayout(new GridLayout(0, 1));
+
+        JPanel gattiPanel = new JPanel();
+        gattiPanel.setBorder(BorderFactory.createTitledBorder("Gatti"));
+        gattiPanel.setLayout(new GridLayout(0, 1));
+
+        JPanel uccelliPanel = new JPanel();
+        uccelliPanel.setBorder(BorderFactory.createTitledBorder("Uccelli"));
+        uccelliPanel.setLayout(new GridLayout(0, 1));
+
+        JPanel pongaPanel = new JPanel();
+        pongaPanel.setBorder(BorderFactory.createTitledBorder("Ponga"));
+        pongaPanel.setLayout(new GridLayout(0, 1));
 
         for (Animale animale : negozio.getAnimali()) {
             JButton button = new JButton(animale.getNome());
             button.addActionListener(e -> openAnimalPage(animale));
-            add(button);
+
+            if (animale instanceof Cane) {
+                caniPanel.add(button);
+            } else if (animale instanceof Gatto) {
+                gattiPanel.add(button);
+            } else if (animale instanceof Uccello) {
+                uccelliPanel.add(button);
+            } else if (animale instanceof Ponga) {
+                pongaPanel.add(button);
+            }
         }
+
+        add(caniPanel);
+        add(gattiPanel);
+        add(uccelliPanel);
+        add(pongaPanel);
 
         revalidate();
         repaint();
