@@ -84,9 +84,9 @@ public class Login extends Finestra {
             String username = userText.getText();
             String password = new String(passwordField.getPassword());
 
-            if (username.equals("admin") && password.equals("password123")) {
+            if (username.equals("admin") && password.equals("admin")) {
                 JOptionPane.showMessageDialog(this, "Login avvenuto con successo!");
-                setUsername(username); // Cambia il bottone "User" con il nome dell'utente
+                setUsername(username);
                 dispose();
                 new Admin();
 
@@ -96,4 +96,3 @@ public class Login extends Finestra {
         }
     }
 }
-

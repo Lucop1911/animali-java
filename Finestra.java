@@ -1,11 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.lang.module.FindException;
 
 public abstract class Finestra extends JFrame implements ActionListener {
     protected JButton userButton = new JButton("LOGIN");
-    
+
     public Finestra(){
         super();
         creaGUI();
@@ -16,20 +15,18 @@ public abstract class Finestra extends JFrame implements ActionListener {
         this.setResizable(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(700, 600);
+        this.setLocationRelativeTo(null);
         this.setTitle("Negozio Animali");
         this.setVisible(true);
 
-        // Creazione pannello superiore
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setBackground(new Color(255, 200, 200));
 
-        // Aggiunta logo a sinsitra
         ImageIcon logo = new ImageIcon("logo.png");
         Image resizedLogo = logo.getImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
         JLabel logoLabel = new JLabel(new ImageIcon(resizedLogo));
         topPanel.add(logoLabel, BorderLayout.WEST);
 
-        // Creazione bottoni
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttonPanel.setBackground(new Color(255, 200, 200));
 
@@ -37,9 +34,16 @@ public abstract class Finestra extends JFrame implements ActionListener {
         homeButton.setBackground(Color.WHITE);
         homeButton.setPreferredSize(new Dimension(100,35));
         homeButton.setFont(new Font("Arial", Font.BOLD, 15));
+        Negozio negozio = new Negozio("Negozio di Animali");
+
         userButton.addActionListener(e -> {
             dispose();
-            new Home();
+            new Login();
+        });
+
+        homeButton.addActionListener(e -> {
+            dispose();
+            new Home(negozio);
         });
 
         JButton cartButton = new JButton("CART");
@@ -50,7 +54,7 @@ public abstract class Finestra extends JFrame implements ActionListener {
             dispose();
             new Carrello();
         });
-        
+
         userButton.setBackground(Color.WHITE);
         userButton.setPreferredSize(new Dimension(150,35));
         userButton.setFont(new Font("Arial", Font.BOLD, 15));
@@ -62,11 +66,9 @@ public abstract class Finestra extends JFrame implements ActionListener {
             else if(userButton.getText().equals("LOGIN")){
                 dispose();
                 new Login();
-                return;
             }
-            else return;
         });
-        
+
         buttonPanel.add(homeButton);
         buttonPanel.add(Box.createRigidArea(new Dimension(5, 0)));
         buttonPanel.add(cartButton);
