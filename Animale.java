@@ -9,7 +9,6 @@ public class Animale {
     protected double prezzo;
     protected String note;
 
-    // Costruttore
     public Animale(String nome, String descrizione, String razza, String specie, int annoNascita, double prezzo, String note) {
         this.nome = nome;
         this.descrizione = descrizione;
@@ -89,7 +88,6 @@ public class Animale {
         this.note = note;
     }
 
-    // Metodo per stampare le informazioni dell'animale
     @Override
     public String toString() {
         return "Codice: " + codice +
@@ -100,7 +98,6 @@ public class Animale {
                 " | Note: " + note;
     }
 
-    // Confronto due animali (utile per liste o set)
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

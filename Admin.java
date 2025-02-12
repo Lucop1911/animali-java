@@ -25,7 +25,7 @@ public class Admin extends Finestra {
 
         JPanel inventarioPanel = new JPanel();
         inventarioPanel.setLayout(new GridLayout(1, 3, 10, 10));
-        inventarioPanel.add(new JLabel(new ImageIcon("cat.png"))); // Placeholder immagine
+        inventarioPanel.add(new JLabel(new ImageIcon("cat.png")));
         inventarioPanel.add(new JLabel(new ImageIcon("dog1.png")));
         inventarioPanel.add(new JLabel(new ImageIcon("dog2.png")));
 
