@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 
 public abstract class Finestra extends JFrame implements ActionListener {
     protected JButton userButton = new JButton("LOGIN");
+    protected static String nomeUtente = "ADMIN";
 
     public Finestra(){
         super();
@@ -17,7 +18,7 @@ public abstract class Finestra extends JFrame implements ActionListener {
         this.setSize(700, 600);
         this.setLocationRelativeTo(null);
         this.setTitle("Negozio Animali");
-        this.setVisible(true);
+        this.setVisible(false);
 
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setBackground(new Color(255, 200, 200));
@@ -34,7 +35,9 @@ public abstract class Finestra extends JFrame implements ActionListener {
         homeButton.setBackground(Color.WHITE);
         homeButton.setPreferredSize(new Dimension(100,35));
         homeButton.setFont(new Font("Arial", Font.BOLD, 15));
+
         Negozio negozio = new Negozio("Negozio di Animali");
+        negozio.addAnimale(new Cane("Pitbull", "Pitbull", 2022, 22.22, "...", "Sofi"));
 
         userButton.addActionListener(e -> {
             dispose();
@@ -86,6 +89,7 @@ public abstract class Finestra extends JFrame implements ActionListener {
 
     public void setUsername(String nome){
         userButton.setText(nome);
+        nomeUtente = nome;
     }
 
 }

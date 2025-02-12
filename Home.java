@@ -6,13 +6,12 @@ public class Home extends Finestra {
     private Negozio negozio;
 
     public Home(Negozio negozio) {
-
+        super();
+        
         this.negozio = negozio;
         setTitle("Home - Animal Store");
 
         aggiornaBottoni();
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
         setVisible(true);
     }
 
@@ -34,7 +33,6 @@ public class Home extends Finestra {
 
     @Override
     public void creaContenuto() {
-        setUsername("admin");
         JPanel mainPanel = new JPanel(new BorderLayout());
 
         JLabel titleLabel = new JLabel("Lista animali:");

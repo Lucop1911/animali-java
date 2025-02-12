@@ -43,16 +43,5 @@ public class Admin extends Finestra {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == loginButton) {
-            String username = userText.getText();
-            String password = new String(passwordField.getPassword());
-
-            if (username.equals("admin") && password.equals("password123")) {
-                JOptionPane.showMessageDialog(this, "Login avvenuto con successo!");
-                setUsername(username);
-            } else {
-                JOptionPane.showMessageDialog(this, "Credenziali errate. Riprova.");
-            }
-        }
     }
 }
